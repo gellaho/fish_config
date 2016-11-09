@@ -7,6 +7,8 @@ function current_folder -d "Folder with color!"
       set -U prompt_folder_color 08c
     case wire
       set -U prompt_folder_color black
+    case yard
+      set -U prompt_folder_color green
     case '*'
       set -U prompt_folder_color normal
     end

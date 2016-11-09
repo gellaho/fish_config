@@ -1,12 +1,12 @@
-function groundzero
-  # 1. Drop the databases
-  dropdb "-U$1" "$1_development"
-  dropdb "-U$1" "$1_test"
+function groundzero --argument project
+	# 1. Drop the databases
+    dropdb "-U$project" $project"_development"
+    dropdb "-U$project" $project"_test"
 
-  # 2. Recreate the database
-  createdb "-O$1" -Eutf8 "$1_development"
-  createdb "-O$1" -Eutf8 "$1_test"
+    # 2. Recreate the database
+    createdb "-O$project" -Eutf8 $project"_development"
+    createdb "-O$project" -Eutf8 $project"_test"
 
-  rake db:schema:load
-  # rake db:seed
+    rake db:schema:load
+    # rake db:seed
 end
