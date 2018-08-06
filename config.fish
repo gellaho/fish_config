@@ -9,7 +9,6 @@ set -g theme_display_ruby no
 set -g theme_display_git_ahead_verbose yes
 
 alias s 'git status'
-alias js 'jruby -S'
 alias d 'git diff'
 alias merge 'git merge'
 alias rebase 'git rebase'
@@ -35,19 +34,7 @@ alias credo 'mix credo --strict'
 
 alias co 'git checkout'
 alias com 'git checkout master'
-alias cod 'git checkout develop'
 
-alias edge 'cd ~/RailsApps/edge'
-alias wire 'cd ~/RailsApps/wire'
-alias push 'cd ~/RailsApps/push'
-alias dash 'cd ~/RailsApps/dash'
-alias yard 'cd ~/elixir/yard'
-alias macros 'cd ~/macros/macros'
-alias fast 'cd ~/node/fast-node'
-alias roibot 'cd ~/RailsApps/roibot'
 alias gotofish 'cd ~/.config/fish'
-alias tests 'cd ~/tests'
 
 alias neat 'echo yep'
-
-rvm default
